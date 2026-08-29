@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jason - Data Analytics Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+            color: #f1f5f9;
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #334155;
+        }
+
+        nav .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav .logo {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: white;
+        }
+
+        nav a {
+            color: #cbd5e1;
+            text-decoration: none;
+            font-size: 0.875rem;
+            transition: color 0.3s;
+            margin-left: 1.5rem;
+        }
+
+        nav a:hover {
+            color: white;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        section {
+            padding: 3rem 0;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 5rem 0;
+        }
+
+        .hero .badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            background: rgba(34, 211, 238, 0.2);
+            color: #06b6d4;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: bold;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero .gradient {
+            background: linear-gradient(90deg, #06b6d4, #0ea5e9);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: #94a3b8;
+            max-width: 42rem;
+            margin-bottom: 2rem;
+        }
+
+        .cta-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            background: #06b6d4;
+            color: white;
+            text-decoration: none;
+            border-radius: 0.5rem;
+            font-weight: 500;
+            transition: background 0.3s;
+        }
+
+        .cta-btn:hover {
+            background: #0891b2;
+        }
+
+        /* Sections */
+        .section-border {
+            border-top: 1px solid #475569;
+        }
+
+        h2 {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 3rem;
+        }
+
+        h3 {
+            font-size: 1.125rem;
+            font-weight: bold;
+        }
+
+        h4 {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: #06b6d4;
+            margin-bottom: 0.5rem;
+        }
+
+        /* About Section */
+        .about {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .about-card {
+            background: rgba(30, 41, 59, 0.5);
+            border: 1px solid #334155;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .about-card p {
+            color: #cbd5e1;
+            font-size: 0.95rem;
+        }
+
+        @media (max-width: 768px) {
+            .about {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+        }
+
+        /* Projects Section */
+        .projects {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+
+        .project-card {
+            background: rgba(30, 41, 59, 0.3);
+            border: 1px solid #334155;
+            border-radius: 0.5rem;
+            overflow: hidden;
+            transition: border-color 0.3s;
+        }
+
+        .project-card:hover {
+            border-color: #64748b;
+        }
+
+        .project-header {
+            padding: 1.5rem;
+            cursor: pointer;
+            user-select: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            transition: background 0.3s;
+        }
+
+        .project-header:hover {
+            background: rgba(30, 41, 59, 0.5);
+        }
+
+        .project-header-content {
+            flex: 1;
+        }
+
+        .project-title-row {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .project-title {
+            font-weight: bold;
+            font-size: 1.125rem;
+            color: white;
+        }
+
+        .tool-badge {
+            display: inline-block;
+            padding: 0.25rem 0.5rem;
+            background: rgba(34, 211, 238, 0.2);
+            color: #06b6d4;
+            border-radius: 0.25rem;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+
+        .project-description {
+            color: #cbd5e1;
+            font-size: 0.95rem;
+        }
+
+        .chevron {
+            width: 20px;
+            height: 20px;
+            flex-shrink: 0;
+            color: #64748b;
+            transition: transform 0.3s;
+        }
+
+        .project-card.expanded .chevron {
+            transform: rotate(180deg);
+        }
+
+        .project-details {
+            display: none;
+            padding: 1.5rem;
+            background: rgba(15, 23, 42, 0.5);
+            border-top: 1px solid #334155;
+        }
+
+        .project-card.expanded .project-details {
+            display: block;
+        }
+
+        .detail-section {
+            margin-bottom: 1.5rem;
+        }
+
+        .detail-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .detail-section p {
+            color: #cbd5e1;
+            font-size: 0.95rem;
+        }
+
+        .highlight-list {
+            list-style: none;
+        }
+
+        .highlight-list li {
+            display: flex;
+            gap: 0.75rem;
+            color: #cbd5e1;
+            font-size: 0.95rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .highlight-list li:before {
+            content: "▸";
+            color: #06b6d4;
+            flex-shrink: 0;
+        }
+
+        .dashboard-preview {
+            margin: 1.5rem 0;
+        }
+
+        .dashboard-preview img {
+            width: 100%;
+            border-radius: 0.5rem;
+            border: 1px solid #334155;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            transition: border-color 0.3s;
+        }
+
+        .dashboard-preview img:hover {
+            border-color: #06b6d4;
+        }
+
+        .dashboard-label {
+            font-size: 0.75rem;
+            color: #64748b;
+            margin-bottom: 0.5rem;
+        }
+
+        .skills-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .skill-tag {
+            padding: 0.25rem 0.75rem;
+            background: #1e293b;
+            color: #cbd5e1;
+            font-size: 0.75rem;
+            border-radius: 9999px;
+            border: 1px solid #475569;
+        }
+
+        .key-achievement {
+            padding-top: 1rem;
+            border-top: 1px solid #334155;
+            font-size: 0.95rem;
+        }
+
+        .key-achievement span {
+            color: #06b6d4;
+            font-weight: 600;
+        }
+
+        /* Skills Section */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .skill-box {
+            background: rgba(30, 41, 59, 0.3);
+            border: 1px solid #334155;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+        }
+
+        .skill-box h3 {
+            color: #06b6d4;
+            margin-bottom: 1rem;
+        }
+
+        .skill-box ul {
+            list-style: none;
+        }
+
+        .skill-box li {
+            color: #cbd5e1;
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .skill-box li:before {
+            content: "✓";
+            color: #06b6d4;
+            font-weight: bold;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: linear-gradient(135deg, rgba(34, 211, 238, 0.1) 0%, rgba(59, 130, 246, 0.1) 100%);
+            border: 1px solid rgba(34, 211, 238, 0.3);
+            border-radius: 0.5rem;
+            padding: 3rem;
+            text-align: center;
+        }
+
+        .contact h2 {
+            margin-bottom: 1rem;
+        }
+
+        .contact p {
+            color: #94a3b8;
+            max-width: 28rem;
+            margin: 0 auto 2rem;
+        }
+
+        .contact-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .contact-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            background: #06b6d4;
+            color: white;
+            text-decoration: none;
+            border-radius: 0.5rem;
+            font-weight: 500;
+            transition: background 0.3s;
+        }
+
+        .contact-btn:hover {
+            background: #0891b2;
+        }
+
+        .contact-btn.secondary {
+            background: #475569;
+        }
+
+        .contact-btn.secondary:hover {
+            background: #64748b;
+        }
+
+        /* Footer */
+        footer {
+            border-top: 1px solid #334155;
+            padding: 2rem;
+            text-align: center;
+            color: #64748b;
+            font-size: 0.875rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="logo">Anthonia Churchill</div>
+            <div style="display: flex; gap: 1rem;">
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#skills">Skills</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="badge">Data Analytics Portfolio</div>
+            <h1>Turning data into<br><span class="gradient">actionable insights</span></h1>
+            <p>Entry-level Data Analyst transitioning from customer service. Building advanced analytics capabilities in Excel, Power BI, and SQL. Based in Nigeria, open to remote or on-site opportunities.</p>
+            <a href="#projects" class="cta-btn">View My Projects →</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section-border">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="about">
+                <div>
+                    <p style="color: #cbd5e1; margin-bottom: 1rem;">I'm Anthonia Churchill, transitioning into data analytics with a focus on remote or on-site entry-level Data Analyst and Business Analyst roles. With a Bachelor's degree from the University of Port Harcourt, I've built a hands-on portfolio demonstrating proficiency in analytics tools and methodologies.</p>
+                    <p style="color: #cbd5e1;">My background in customer-facing roles gave me insights into data-driven decision making. Now I'm channeling that into technical analysis—cleaning data, building dashboards, and uncovering patterns that drive business decisions.</p>
+                </div>
+                <div>
+                    <div class="about-card">
+                        <h4>Current Focus</h4>
+                        <p>Building specialized healthcare analytics portfolio alongside general analytics expertise</p>
+                    </div>
+                    <div class="about-card">
+                        <h4>Location</h4>
+                        <p>Nigeria • Remote or On-site</p>
+                    </div>
+                    <div class="about-card">
+                        <h4>Education</h4>
+                        <p>Bachelor's Degree, University of Port Harcourt</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section-border">
+        <div class="container">
+            <h2>Featured Projects</h2>
+            <div class="projects" id="projectsList"></div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section-border">
+        <div class="container">
+            <h2>Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-box">
+                    <h3>Analytics & Visualization</h3>
+                    <ul>
+                        <li>Excel (Advanced)</li>
+                        <li>Power BI</li>
+                        <li>DAX</li>
+                        <li>Power Query</li>
+                    </ul>
+                </div>
+                <div class="skill-box">
+                    <h3>Data & Databases</h3>
+                    <ul>
+                        <li>SQL (In-progress)</li>
+                        <li>Data Modeling</li>
+                        <li>Data Cleaning</li>
+                        <li>Star Schema</li>
+                    </ul>
+                </div>
+                <div class="skill-box">
+                    <h3>Analysis & Methods</h3>
+                    <ul>
+                        <li>Exploratory Data Analysis</li>
+                        <li>Business Intelligence</li>
+                        <li>Funnel Analysis</li>
+                        <li>Statistical Analysis</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section-border">
+        <div class="container">
+            <div class="contact">
+                <h2>Let's Connect</h2>
+                <p>I'm actively seeking remote entry-level Data Analyst and Business Analyst opportunities. Let's discuss how my analytics skills can contribute to your team.</p>
+                <div class="contact-buttons">
+                    <a href="mailto:your.email@example.com" class="contact-btn">📧 Email</a>
+                    <a href="https://linkedin.com/in/yourprofile" class="contact-btn secondary">💼 LinkedIn</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Data Analytics Portfolio © 2026 • Based in Nigeria • Remote or On-site</p>
+    </footer>
+
+    <script>
+        const projects = [
+            {
+                id: 1,
+                title: 'Healthcare Analysis Dashboard',
+                tool: 'Excel',
+                description: 'Comprehensive analysis of 55,500 patient records with advanced Excel analytics',
+                highlights: [
+                    'Data Cleaning: Handled missing values and standardized formats across 55.5K rows',
+                    'PivotTables & Calculated Columns: Built multi-dimensional analysis of billing patterns',
+                    'Key Insight: Identified unusual billing uniformity (~$25,500 avg) across all clinical factors, suggesting flat-rate or DRG-based billing system',
+                    'Visualizations: Created charts showing relationships between admission type, length of stay, and costs',
+                    'Summary: Comprehensive written analysis of patterns and business implications'
+                ],
+                dataset: '55,500 patient records',
+                skills: ['Excel (Advanced)', 'Data Cleaning', 'PivotTables', 'Formulas', 'Statistical Analysis'],
+                keyMetric: 'Identified billing structure anomaly',
+                image: 'healthcare-dashboard.jpg'
+            },
+            {
+                id: 2,
+                title: 'NaijaPhoneShop Sales Analytics',
+                tool: 'Power BI + DAX',
+                description: 'Sales performance dashboard for Nigerian phone retailer with Power Query data cleaning',
+                highlights: [
+                    'Power Query: Cleaned messy Nigerian sales data with multiple formatting issues',
+                    'Data Model: Built structured relationships between sales, products, and transactions',
+                    'DAX Measures: Implemented Total Revenue, Total Transactions, Average Order Value',
+                    'Visualizations: Sales trends, product performance, transaction analysis',
+                    'Real-world complexity: Navigated real messy data from actual retail operations'
+                ],
+                dataset: 'Nigerian retail sales data',
+                skills: ['Power BI', 'DAX', 'Power Query', 'Data Modeling', 'Sales Analytics'],
+                keyMetric: 'End-to-end retail analytics pipeline'
+            },
+            {
+                id: 3,
+                title: 'TechStore E-Commerce Analytics Capstone',
+                tool: 'Power BI + DAX + SQL',
+                description: 'Advanced capstone project analyzing e-commerce funnel with star schema data model',
+                highlights: [
+                    'Star Schema Design: Built dimensional data model (fact & dimension tables)',
+                    'Conversion Funnel: Implemented 10+ DAX measures tracking Sessions → Views → Cart → Purchase',
+                    'Analysis: Drop-off rates at each stage, revenue by traffic source, product performance',
+                    'Multiple Report Pages: Interactive dashboards with drill-through capabilities',
+                    'Documentation: Created Word summary of methodology, insights, and recommendations',
+                    'Dataset: 1,200 e-commerce orders with traffic sources and conversion data'
+                ],
+                dataset: '1,200 e-commerce transactions',
+                skills: ['Power BI', 'DAX (Advanced)', 'SQL', 'Data Modeling', 'Star Schema', 'Funnel Analysis'],
+                keyMetric: 'Conversion rate tracking: 5.02% actual vs 3% target',
+                images: ['techstore-page1.jpg', 'techstore-page2.jpg']
+            }
+        ];
+
+        const projectsList = document.getElementById('projectsList');
+        projectsList.innerHTML = projects.map(project => `
+            <div class="project-card" onclick="this.classList.toggle('expanded')">
+                <div class="project-header">
+                    <div class="project-header-content">
+                        <div class="project-title-row">
+                            <span class="project-title">${project.title}</span>
+                            <span class="tool-badge">${project.tool}</span>
+                        </div>
+                        <p class="project-description">${project.description}</p>
+                    </div>
+                    <svg class="chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                    </svg>
+                </div>
+                <div class="project-details">
+                    <div class="detail-section">
+                        <h4>Dataset</h4>
+                        <p>${project.dataset}</p>
+                    </div>
+
+                    ${project.image ? `
+                        <div class="detail-section">
+                            <h4>Dashboard Preview</h4>
+                            <div class="dashboard-preview">
+                                <img src="${project.image}" alt="${project.title} Dashboard" loading="lazy">
+                            </div>
+                        </div>
+                    ` : ''}
+
+                    ${project.images ? `
+                        <div class="detail-section">
+                            <h4>Dashboard Preview</h4>
+                            ${project.images.map((img, idx) => `
+                                <div class="dashboard-preview">
+                                    <div class="dashboard-label">Page ${idx + 1}</div>
+                                    <img src="${img}" alt="${project.title} Page ${idx + 1}" loading="lazy">
+                                </div>
+                            `).join('')}
+                        </div>
+                    ` : ''}
+
+                    <div class="detail-section">
+                        <h4>Key Highlights</h4>
+                        <ul class="highlight-list">
+                            ${project.highlights.map(h => `<li>${h}</li>`).join('')}
+                        </ul>
+                    </div>
+
+                    <div class="detail-section">
+                        <h4>Technical Skills Applied</h4>
+                        <div class="skills-tags">
+                            ${project.skills.map(skill => `<span class="skill-tag">${skill}</span>`).join('')}
+                        </div>
+                    </div>
+
+                    <div class="detail-section key-achievement">
+                        <span>Key Achievement:</span> ${project.keyMetric}
+                    </div>
+                </div>
+            </div>
+        `).join('');
+    </script>
+</body>
+</html>
