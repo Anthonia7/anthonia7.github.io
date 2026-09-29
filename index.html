@@ -37,18 +37,65 @@ section{padding:78px 0;border-top:1px solid var(--line)}.section-head{display:fl
 <section id="projects"><div class="wrap"><div class="section-head"><div><div class="kicker">Selected work</div><h2>Projects</h2></div><p>Two completed case studies are currently featured. The Toy Store E-commerce project will be added after the analysis is finished.</p></div>
 <div class="projects">
 
-<article class="project"><div class="project-top"><div><div class="num">01</div><h3>Healthcare Analysis</h3><div class="tools">Excel</div></div></div><p>Analysis of 54,966 patient records to understand medical conditions, demographics, billing, admissions, length of stay, medications, insurance providers and test results.</p>
+<article class="project"><div class="project-top"><div><div class="num">01</div><h3>Healthcare Patient Analysis</h3><div class="tools">Excel · PivotTables</div></div></div>
+<p>Exploratory analysis of 54,966 patient records to uncover patterns across medical conditions, demographics, admissions, billing, length of stay, medications, insurance providers and test results.</p>
 <div class="details"><details><summary>View case study</summary><div class="case">
-<h4>1. Introduction</h4><p>This project analyzes healthcare patient data to identify patterns in patient demographics, medical conditions, hospital admissions, billing, length of stay, medications, and test results. Using Excel, the analysis turns a large patient dataset into practical insights that can help understand patient characteristics and healthcare service patterns.</p>
-<h4>2. Problem Statement</h4><p>Healthcare organizations generate large amounts of patient data, but raw data can make it difficult to identify important patterns. This project focuses on understanding common medical conditions, hospital admissions, billing, medications and test results across the patient population.</p>
-<h4>3. Data Sourcing</h4><p>The dataset contains <strong>54,966 patient records across 20 fields</strong>, covering patient demographics, medical conditions, hospital admissions, billing, medications and test results.</p>
-<h4>4. Data Transformation &amp; Cleaning</h4><p>The dataset was prepared and analyzed in Excel. Date fields were standardized, and the data was reviewed for inconsistencies and formatting issues. Excel functions, sorting, filtering and data preparation techniques were used to make the dataset suitable for analysis.</p>
-<h4>5. Data Modelling</h4><p>Because this project was completed entirely in Excel, the patient data was organized into a structured dataset that could be filtered and summarized efficiently using pivot tables and calculated fields.</p>
-<h4>6. Analytics &amp; Measures</h4><ul><li>Patient count by medical condition</li><li>Average billing amount</li><li>Length of hospital stay</li><li>Admission type distribution</li><li>Medication frequency</li><li>Insurance provider distribution</li><li>Test result distribution</li></ul>
-<h4>7. Dashboard &amp; Visuals</h4><p>The Excel analysis presents summary tables, charts and visual comparisons covering medical conditions, patient demographics, billing, admission types, length of stay, medications, insurance providers and test results.</p>
-<h4>8. Insights &amp; Findings</h4><ul><li>Arthritis was the most common condition, with <strong>9,218 patients</strong>.</li><li>Asthma followed with <strong>9,095 patients</strong>.</li><li>Average billing was approximately <strong>$25,544.31</strong>.</li><li>Maximum recorded length of stay was <strong>15 days</strong>.</li><li>Elective admissions were the most common admission type.</li><li>Lipitor was the most frequently recorded medication.</li><li>Cigna was the most represented insurance provider.</li><li>Approximately <strong>33.54%</strong> of test results were abnormal.</li></ul>
-<h4>9. Recommendations</h4><ul><li>Monitor frequently occurring medical conditions to understand areas of high patient demand.</li><li>Review billing patterns to identify significant differences in healthcare costs.</li><li>Examine factors associated with longer hospital stays.</li><li>Track abnormal test results to identify patterns that may require further investigation.</li></ul>
-<h4>10. Conclusion</h4><p>This project demonstrates the use of Excel to transform a large healthcare dataset into meaningful business and operational insights across patient conditions, demographics, billing, admissions, medications, insurance, length of stay and test results.</p>
+<h4>1. Introduction</h4>
+<p>This project explores a healthcare patient dataset to identify meaningful patterns across patient demographics, medical conditions, hospital admissions, billing, medications, insurance providers and test results. The analysis transforms raw patient records into clear findings that are easier to understand and communicate through an Excel dashboard.</p>
+
+<h4>2. Problem Statement</h4>
+<p>Healthcare organizations collect large volumes of patient information, but raw records can make it difficult to identify important trends quickly. This project focuses on answering practical questions around common medical conditions, admission patterns, healthcare billing, hospital stays, medications, insurance coverage and test results.</p>
+
+<h4>3. Data Sourcing</h4>
+<p>The analysis uses a healthcare patient dataset containing <strong>54,966 records across 20 columns</strong>. The dataset includes patient demographics, medical conditions, admission information, medication, test results, insurance providers, billing amounts and length of stay.</p>
+
+<h4>4. Data Transformation &amp; Cleaning</h4>
+<p>The dataset was prepared in Excel before analysis. The cleaning process included reviewing the dataset structure, checking for missing or inconsistent values, checking for duplicate records, standardizing date formats and reviewing data types. The cleaned data was then organized for analysis using Excel PivotTables.</p>
+
+<h4>5. Data Modelling</h4>
+<p>Because this project was completed in Excel, a complex relational data model was not required. The cleaned patient dataset was maintained as a structured table, with fields organized so they could be summarized and compared through PivotTables, filters and calculated values.</p>
+
+<h4>6. Analytics &amp; Measures</h4>
+<p>PivotTables and Excel calculations were used to summarize the dataset and answer the project’s business questions.</p>
+<ul>
+<li>Total patient records</li>
+<li>Patient distribution by medical condition</li>
+<li>Patient distribution by admission type</li>
+<li>Average billing amount</li>
+<li>Maximum length of stay</li>
+<li>Medication frequency</li>
+<li>Insurance provider distribution</li>
+<li>Test result distribution</li>
+<li>Patient demographic patterns</li>
+</ul>
+
+<h4>7. Dashboard &amp; Visuals</h4>
+<p>The dashboard brings the analysis together through KPI summaries, charts and category comparisons. It provides an overview of patient demographics, medical conditions, admission types, billing, length of stay, medications, insurance providers and test results, allowing key patterns to be identified at a glance.</p>
+
+<h4>8. Insights &amp; Findings</h4>
+<ul>
+<li><strong>54,966 patient records</strong> were analyzed.</li>
+<li><strong>Arthritis</strong> was the most frequently recorded condition with <strong>9,218 patients</strong>, followed by <strong>Asthma</strong> with <strong>9,095 patients</strong>.</li>
+<li>The average billing amount was approximately <strong>25,544.31</strong>.</li>
+<li>The maximum recorded length of stay was <strong>15 days</strong>.</li>
+<li><strong>Elective</strong> admissions were the most common admission type.</li>
+<li><strong>Lipitor</strong> was the most frequently recorded medication.</li>
+<li><strong>Cigna</strong> was the most represented insurance provider in the analysis.</li>
+<li>Approximately <strong>33.54%</strong> of recorded test results were abnormal.</li>
+</ul>
+
+<h4>9. Recommendations</h4>
+<ul>
+<li>Monitor frequently recorded conditions such as arthritis and asthma to support healthcare resource planning.</li>
+<li>Review billing patterns to better understand healthcare cost distribution and identify areas for further investigation.</li>
+<li>Use admission and length-of-stay patterns to support hospital capacity and operational planning.</li>
+<li>Monitor abnormal test-result patterns alongside medical conditions and demographics for deeper analysis.</li>
+<li>Track medication patterns to support medication planning and inventory decisions.</li>
+<li>Further analysis could examine relationships between medical conditions, medications, billing, length of stay and patient outcomes.</li>
+</ul>
+
+<h4>10. Conclusion</h4>
+<p>This project demonstrates how a large healthcare dataset can be cleaned, organized and analyzed in Excel to produce practical insights. By examining <strong>54,966 patient records</strong>, the analysis identified patterns across conditions, admissions, billing, medications, insurance, test results and hospital stays. The resulting dashboard turns these findings into a clear visual summary that can support healthcare-related operational analysis and decision-making.</p>
 </div></details></div></article>
 
 <article class="project"><div class="project-top"><div><div class="num">02</div><h3>E-commerce Sales Analysis</h3><div class="tools">SQL · Power BI</div></div></div><p>Analysis of a small e-commerce business to understand sales performance, order fulfillment, product categories and customer contribution.</p>
