@@ -3,41 +3,119 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Anthonia Churchill | Entry-Level Data Analyst</title>
-<meta name="description" content="Portfolio of Anthonia Churchill, an Entry-Level Data Analyst working with Excel, SQL and Power BI.">
+<title>Anthonia Churchill | Data Analyst</title>
+<meta name="description" content="Portfolio of Anthonia Churchill, an entry-level Data Analyst working with Excel, SQL and Power BI.">
 <style>
-:root{--bg:#f8f7f4;--surface:#fff;--ink:#171717;--muted:#66615e;--soft:#eeeae5;--accent:#7b2f67;--accent-soft:#f1e5ed;--dark:#1d1b1b;--max:1180px}
+:root{--bg:#faf8f6;--ink:#1d1b1b;--muted:#6e6868;--accent:#7d2f65;--accent2:#f0e2eb;--card:#fff;--line:#e7dfdf;--max:1120px}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6}
-a{color:inherit}.wrap{width:min(var(--max),calc(100% - 48px));margin:auto}
-nav{position:sticky;top:0;z-index:20;background:rgba(248,247,244,.92);backdrop-filter:blur(14px)}
-.nav-inner{height:78px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #e8e4df}
-.logo{font-size:19px;font-weight:800;letter-spacing:-.03em}.navlinks{display:flex;gap:30px;font-size:14px;color:#625d59}.navlinks a{text-decoration:none}.navlinks a:hover{color:var(--accent)}
-.hero{padding:112px 0 100px;display:grid;grid-template-columns:1.2fr .8fr;gap:80px;align-items:end}
-.eyebrow{font-size:12px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--accent)}
-h1{font-size:clamp(52px,7vw,86px);line-height:.98;letter-spacing:-.065em;margin:18px 0 28px;max-width:850px}
-.hero-copy{font-size:19px;color:var(--muted);max-width:690px}.hero-note{border-left:2px solid var(--accent);padding-left:25px;color:var(--muted);font-size:14px}.hero-note strong{display:block;color:var(--ink);font-size:15px;margin-bottom:5px}.hero-note div+div{margin-top:22px}
-.btn{display:inline-flex;align-items:center;gap:8px;background:var(--ink);color:#fff;text-decoration:none;padding:13px 19px;border-radius:7px;font-size:14px;font-weight:750;margin-top:30px}.btn:hover{background:var(--accent)}
-section{padding:88px 0}.section-title{font-size:42px;line-height:1.05;letter-spacing:-.045em;margin:9px 0 0}.section-intro{max-width:570px;color:var(--muted);margin:14px 0 0}
-.about{display:grid;grid-template-columns:.8fr 1.2fr;gap:100px;border-top:1px solid #e5e0db;padding-top:65px}.about-copy{font-size:18px;color:#4f4a47;max-width:700px}.about-copy p{margin:0 0 18px}
-.tools-showcase{margin-top:38px;background:#171717;color:white;border-radius:22px;padding:28px;display:grid;grid-template-columns:1.1fr 1.9fr;gap:30px;align-items:center}.tools-showcase h3{font-size:24px;margin:0 0 7px;letter-spacing:-.03em}.tools-showcase p{margin:0;color:#bdb8b5;font-size:14px}.tool-list{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.tool{background:#272424;border:1px solid #393535;border-radius:12px;padding:16px 14px}.tool b{display:block;font-size:14px}.tool span{font-size:12px;color:#aaa4a1}
-.skills{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}.skill{background:white;border:1px solid #ded9d4;border-radius:999px;padding:9px 15px;font-size:14px}
-.projects{display:grid;gap:24px;margin-top:42px}.project{background:var(--surface);border-radius:22px;overflow:hidden;box-shadow:0 8px 30px rgba(30,25,20,.055);border:1px solid #e8e3de}.project-visual{height:250px;background:linear-gradient(135deg,#efe7ec,#f8f4f6);display:flex;align-items:center;justify-content:center;padding:26px}.preview{width:100%;height:100%;border:1px solid #ddd5d9;border-radius:14px;background:white;display:flex;flex-direction:column;overflow:hidden}.preview-top{height:34px;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:13px;letter-spacing:.04em}.preview-body{padding:18px;display:grid;grid-template-columns:repeat(3,1fr);gap:10px;flex:1}.mini-card{border:1px solid #e5e0dc;border-radius:8px;padding:9px;background:#fff}.mini-card strong{font-size:18px}.mini-card span{display:block;font-size:9px;color:#777}.bars{grid-column:1/-1;display:flex;gap:7px;align-items:end}.bar{flex:1;background:#b87fa5;border-radius:5px 5px 0 0}.bar:nth-child(1){height:38%}.bar:nth-child(2){height:68%}.bar:nth-child(3){height:52%}.bar:nth-child(4){height:82%}.bar:nth-child(5){height:61%}
-.project-content{padding:30px 32px 32px}.project-number{font-size:12px;font-weight:800;color:var(--accent);letter-spacing:.15em}.project h3{font-size:29px;letter-spacing:-.04em;margin:7px 0}.project-desc{color:var(--muted);max-width:850px;margin:0}.project-meta{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0}.tag{font-size:12px;font-weight:700;background:var(--accent-soft);color:#6a2757;padding:7px 10px;border-radius:999px}.project-actions{display:flex;gap:10px;margin-top:22px}.project-actions a{font-size:13px;font-weight:750;text-decoration:none;border-bottom:1px solid var(--ink);padding-bottom:2px}.case{margin-top:24px;border-top:1px solid #e7e1dd;padding-top:18px}.case summary{cursor:pointer;font-weight:750;font-size:14px}.case h4{font-size:14px;margin:22px 0 6px}.case p,.case li{font-size:13px;color:#5f5956}.case ul{padding-left:20px}
-.contact-box{background:var(--dark);color:white;border-radius:24px;padding:54px}.contact-box h2{font-size:44px;letter-spacing:-.045em;margin:9px 0}.contact-box p{color:#c7c1bd;max-width:680px}.contact-link{display:inline-block;margin-top:15px;color:white;font-weight:750;text-decoration:none;border-bottom:1px solid white;padding-bottom:3px}
-footer{padding:32px 0 48px;color:#77716d;font-size:13px;display:flex;justify-content:space-between}
-@media(max-width:800px){.wrap{width:min(var(--max),calc(100% - 32px))}.navlinks{display:none}.hero{grid-template-columns:1fr;gap:35px;padding:78px 0}.about{grid-template-columns:1fr;gap:28px}.tools-showcase{grid-template-columns:1fr}.tool-list{grid-template-columns:repeat(2,1fr)}.section-title{font-size:36px}.project-visual{height:210px}.contact-box{padding:38px 28px}}
+a{color:inherit}.wrap{max-width:var(--max);margin:auto;padding:0 28px}
+nav{height:76px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(250,248,246,.94);backdrop-filter:blur(12px);z-index:10}
+.logo{font-weight:800;letter-spacing:-.03em;font-size:20px}.navlinks{display:flex;gap:28px;font-size:14px;color:var(--muted)}.navlinks a{text-decoration:none}.navlinks a:hover{color:var(--accent)}
+.hero{padding:105px 0 90px;display:grid;grid-template-columns:1.35fr .65fr;gap:60px;align-items:end}
+.kicker{text-transform:uppercase;letter-spacing:.16em;font-size:12px;color:var(--accent);font-weight:700}
+h1{font-size:clamp(48px,7vw,82px);line-height:.98;letter-spacing:-.06em;margin:18px 0 25px;max-width:780px}
+.hero p{font-size:19px;color:var(--muted);max-width:680px;margin:0}
+.hero-side{border-left:1px solid var(--line);padding-left:28px}.hero-side strong{display:block;font-size:15px;margin-bottom:8px}.hero-side span{display:block;color:var(--muted);font-size:14px;margin-bottom:22px}
+.btn{display:inline-block;background:var(--ink);color:white;text-decoration:none;padding:12px 18px;border-radius:8px;font-size:14px;font-weight:700;margin-top:28px}.btn:hover{background:var(--accent)}
+section{padding:78px 0;border-top:1px solid var(--line)}.section-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:34px}.section-head h2{font-size:38px;letter-spacing:-.04em;margin:0}.section-head p{color:var(--muted);max-width:520px;margin:0}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:70px}.about p{font-size:18px;color:#4f4949}.skills{display:flex;flex-wrap:wrap;gap:10px}.pill{border:1px solid var(--line);background:white;border-radius:999px;padding:8px 14px;font-size:14px}
+.projects{display:grid;gap:22px}.project{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:30px}.project-top{display:flex;justify-content:space-between;gap:25px}.num{font-size:13px;color:var(--accent);font-weight:800}.project h3{font-size:28px;letter-spacing:-.03em;margin:8px 0}.tools{font-size:13px;color:var(--accent);font-weight:700}.project p{color:var(--muted);max-width:820px}.details{margin-top:25px;border-top:1px solid var(--line);padding-top:10px}.details summary{cursor:pointer;font-weight:700;padding:12px 0}.case{padding:10px 0 22px}.case h4{margin:22px 0 7px;font-size:15px}.case p,.case li{color:#575050;font-size:14px}.case ul{padding-left:20px}
+.contact{background:var(--ink);color:white;border-radius:22px;padding:48px}.contact p{color:#d4cdcd;max-width:650px}.contact a{color:white}.footer{padding:35px 0;color:var(--muted);font-size:13px;display:flex;justify-content:space-between}
+@media(max-width:760px){.navlinks{display:none}.hero{grid-template-columns:1fr;padding-top:70px}.hero-side{border-left:0;border-top:1px solid var(--line);padding:24px 0 0}.about{grid-template-columns:1fr;gap:20px}.section-head{display:block}.section-head p{margin-top:12px}.project-top{display:block}h1{font-size:54px}}
 </style>
 </head>
 <body>
-<nav><div class="wrap nav-inner"><div class="logo">Anthonia Churchill</div><div class="navlinks"><a href="#about">About Me</a><a href="#projects">Projects</a><a href="#skills">Technical Skills</a><a href="#contact">Contact</a></div></div></nav>
-<header class="wrap hero"><div><div class="eyebrow">Entry-Level Data Analyst</div><h1>Turning raw data into clear business answers.</h1><p class="hero-copy">I work with data to uncover patterns, answer practical business questions and create dashboards that make information easier to understand.</p><a class="btn" href="#projects">Explore my projects <span>↓</span></a></div><div class="hero-note"><div><strong>Based in Lagos, Nigeria</strong>Open to entry-level data analyst opportunities, internships and real-world projects.</div><div><strong>Focus</strong>Business analytics · Data visualization · Reporting</div></div></header>
-<section id="about"><div class="wrap about"><div><div class="eyebrow">About Me</div><h2 class="section-title">Analytical, practical and curious.</h2></div><div class="about-copy"><p>I’m an early-career Data Analyst with a background in Business Management and hands-on training in data analytics. I enjoy turning raw data into clear insights that can help people understand what is happening and make better-informed decisions.</p><p>My work combines data cleaning, analysis and visualization, with a focus on asking useful business questions and communicating findings clearly.</p></div></div><div class="wrap tools-showcase"><div><h3>Tools I use</h3><p>A practical toolkit for working with, analyzing and presenting data.</p></div><div class="tool-list"><div class="tool"><b>Microsoft Excel</b><span>Analysis & dashboards</span></div><div class="tool"><b>SQL</b><span>Data querying</span></div><div class="tool"><b>Power BI</b><span>Interactive reporting</span></div><div class="tool"><b>Python</b><span>Basic data analysis</span></div><div class="tool"><b>ChatGPT</b><span>AI-assisted workflows</span></div><div class="tool"><b>Claude</b><span>AI-assisted workflows</span></div></div></div></section>
-<section id="skills"><div class="wrap"><div class="eyebrow">Technical Skills</div><h2 class="section-title">What I work with.</h2><div class="skills"><span class="skill">Excel</span><span class="skill">SQL</span><span class="skill">Power BI</span><span class="skill">DAX</span><span class="skill">Data Cleaning</span><span class="skill">Pivot Tables</span><span class="skill">Data Visualization</span><span class="skill">Dashboard Reporting</span></div></div></section>
-<section id="projects"><div class="wrap"><div class="eyebrow">Featured Projects</div><h2 class="section-title">Selected work.</h2><p class="section-intro">A small collection of practical analytics projects built around real business questions.</p><div class="projects">
-<article class="project"><div class="project-visual"><div class="preview"><div class="preview-top">HEALTHCARE DATA ANALYSIS</div><div class="preview-body"><div class="mini-card"><span>TOTAL PATIENTS</span><strong>54,966</strong></div><div class="mini-card"><span>AVG BILLING</span><strong>25,544</strong></div><div class="mini-card"><span>MAX STAY</span><strong>15 days</strong></div><div class="bars"><i class="bar"></i><i class="bar"></i><i class="bar"></i><i class="bar"></i><i class="bar"></i></div></div></div></div><div class="project-content"><div class="project-number">01 · HEALTHCARE</div><h3>Healthcare Patient Analysis</h3><p class="project-desc">Exploratory analysis of 54,966 patient records to uncover patterns across medical conditions, demographics, admissions, billing, length of stay, medications, insurance providers and test results.</p><div class="project-meta"><span class="tag">Excel</span><span class="tag">PivotTables</span><span class="tag">Healthcare Analytics</span></div><div class="project-actions"><a href="#healthcare-case">View project ↓</a></div><div class="case" id="healthcare-case"><details><summary>Open case study</summary><h4>Business questions</h4><ul><li>Which medical conditions appear most frequently?</li><li>What are the common admission patterns?</li><li>What do billing, length of stay, medication, insurance and test-result patterns show?</li></ul><h4>Key findings</h4><ul><li>Arthritis was recorded for 9,218 patients, followed by Asthma with 9,095.</li><li>Average billing was approximately 25,544.31.</li><li>Maximum length of stay was 15 days.</li><li>Elective admissions were the most common admission type.</li><li>Lipitor was the most frequently recorded medication.</li><li>Approximately 33.54% of recorded test results were abnormal.</li></ul><h4>Approach</h4><p>The dataset was prepared and reviewed in Excel, then summarized with PivotTables and dashboard visuals.</p></details></div></div></article>
-<article class="project"><div class="project-visual"><div class="preview"><div class="preview-top">NAIJA PHONE SALES · POWER BI</div><div class="preview-body"><div class="mini-card"><span>SALES PERFORMANCE</span><strong>Dashboard</strong></div><div class="mini-card"><span>PRODUCTS</span><strong>Phone sales</strong></div><div class="mini-card"><span>ANALYSIS</span><strong>SQL + BI</strong></div><div class="bars"><i class="bar"></i><i class="bar"></i><i class="bar"></i><i class="bar"></i><i class="bar"></i></div></div></div></div><div class="project-content"><div class="project-number">02 · SALES</div><h3>Naija Phone Sales Analysis</h3><p class="project-desc">A full-stack sales analysis using SQL and Power BI to turn phone-sales data into an interactive business performance dashboard.</p><div class="project-meta"><span class="tag">SQL</span><span class="tag">Power BI</span><span class="tag">DAX</span><span class="tag">Sales Analytics</span></div><div class="project-actions"><a href="#phone-case">View project ↓</a></div><div class="case" id="phone-case"><details><summary>Open case study</summary><h4>Business questions</h4><ul><li>How are phone sales performing?</li><li>Which products and categories contribute most to sales?</li><li>What patterns can support sales and inventory decisions?</li></ul><h4>Approach</h4><p>SQL was used to query and prepare the sales data, while Power BI was used to create the interactive dashboard and communicate the results across two dashboard pages.</p></details></div></div></article>
-<article class="project"><div class="project-visual"><div class="preview"><div class="preview-top">E-COMMERCE SALES ANALYTICS</div><div class="preview-body"><div class="mini-card"><span>REVENUE</span><strong>$1.94M</strong></div><div class="mini-card"><span>ORDERS</span><strong>32.3K</strong></div><div class="mini-card"><span>GROSS PROFIT</span><strong>$1.22M</strong></div><div class="bars"><i class="bar"></i><i class="bar"></i><i class="bar"></i><i class="bar"></i><i class="bar"></i></div></div></div></div><div class="project-content"><div class="project-number">03 · E-COMMERCE</div><h3>E-commerce Sales Analytics</h3><p class="project-desc">End-to-end analysis of e-commerce sales performance, product revenue, costs and customer-order activity using SQL and Power BI.</p><div class="project-meta"><span class="tag">SQL</span><span class="tag">Power BI</span><span class="tag">DAX</span><span class="tag">E-commerce Analytics</span></div><div class="project-actions"><a href="#ecom-case">View project ↓</a></div><div class="case" id="ecom-case"><details><summary>Open case study</summary><h4>Key findings</h4><ul><li>Total revenue was approximately $1.94 million.</li><li>Total COGS was approximately $722,370, producing gross profit of about $1.22 million.</li><li>Gross margin was approximately 62.7%.</li><li>The Original Mr. Fuzzy generated the largest share of product revenue.</li><li>Refund activity was concentrated in Mr. Fuzzy, with 17 refunds recorded.</li></ul><h4>Approach</h4><p>The relational e-commerce data was queried in SQL, cleaned and prepared for analysis, then visualized in Power BI to communicate sales and profitability performance.</p></details></div></div></article>
+<nav><div class="wrap" style="width:100%;display:flex;justify-content:space-between;align-items:center"><div class="logo">Anthonia Churchill</div><div class="navlinks"><a href="#about">About</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#contact">Contact</a></div></div></nav>
+
+<header class="wrap hero">
+<div><div class="kicker">Entry-Level Data Analyst</div><h1>Turning data into clear business answers.</h1><p>I use Excel, SQL and Power BI to clean data, explore patterns and build dashboards that make business performance easier to understand.</p><a class="btn" href="#projects">View projects</a></div>
+<div class="hero-side"><strong>Based in Lagos, Nigeria</strong><span>Open to data analytics opportunities and internships.</span><strong>Focus</strong><span>Business analytics · Data visualization · Reporting</span></div>
+</header>
+
+<section id="about"><div class="wrap about"><div><div class="kicker">About</div><h2>Analytical, practical, curious.</h2></div><div><p>I’m an early-career Data Analyst with a background in Business Management and hands-on training in data analytics. I enjoy working with real datasets, finding patterns and turning them into information that people can actually use.</p><p>My current toolkit includes Excel, SQL and Power BI, with a focus on clear analysis, useful dashboards and practical business questions.</p></div></div></section>
+
+<section id="projects"><div class="wrap"><div class="section-head"><div><div class="kicker">Selected work</div><h2>Projects</h2></div><p>Two completed case studies are currently featured. The Toy Store E-commerce project will be added after the analysis is finished.</p></div>
+<div class="projects">
+
+<article class="project"><div class="project-top"><div><div class="num">01</div><h3>Healthcare Patient Analysis</h3><div class="tools">Excel · PivotTables</div></div></div>
+<p>Exploratory analysis of 54,966 patient records to uncover patterns across medical conditions, demographics, admissions, billing, length of stay, medications, insurance providers and test results.</p>
+<div class="details"><details><summary>View case study</summary><div class="case">
+<h4>1. Introduction</h4>
+<p>This project explores a healthcare patient dataset to identify meaningful patterns across patient demographics, medical conditions, hospital admissions, billing, medications, insurance providers and test results. The analysis transforms raw patient records into clear findings that are easier to understand and communicate through an Excel dashboard.</p>
+
+<h4>2. Problem Statement</h4>
+<p>Healthcare organizations collect large volumes of patient information, but raw records can make it difficult to identify important trends quickly. This project focuses on answering practical questions around common medical conditions, admission patterns, healthcare billing, hospital stays, medications, insurance coverage and test results.</p>
+
+<h4>3. Data Sourcing</h4>
+<p>The analysis uses a healthcare patient dataset containing <strong>54,966 records across 20 columns</strong>. The dataset includes patient demographics, medical conditions, admission information, medication, test results, insurance providers, billing amounts and length of stay.</p>
+
+<h4>4. Data Transformation &amp; Cleaning</h4>
+<p>The dataset was prepared in Excel before analysis. The cleaning process included reviewing the dataset structure, checking for missing or inconsistent values, checking for duplicate records, standardizing date formats and reviewing data types. The cleaned data was then organized for analysis using Excel PivotTables.</p>
+
+<h4>5. Data Modelling</h4>
+<p>Because this project was completed in Excel, a complex relational data model was not required. The cleaned patient dataset was maintained as a structured table, with fields organized so they could be summarized and compared through PivotTables, filters and calculated values.</p>
+
+<h4>6. Analytics &amp; Measures</h4>
+<p>PivotTables and Excel calculations were used to summarize the dataset and answer the project’s business questions.</p>
+<ul>
+<li>Total patient records</li>
+<li>Patient distribution by medical condition</li>
+<li>Patient distribution by admission type</li>
+<li>Average billing amount</li>
+<li>Maximum length of stay</li>
+<li>Medication frequency</li>
+<li>Insurance provider distribution</li>
+<li>Test result distribution</li>
+<li>Patient demographic patterns</li>
+</ul>
+
+<h4>7. Dashboard &amp; Visuals</h4>
+<p>The dashboard brings the analysis together through KPI summaries, charts and category comparisons. It provides an overview of patient demographics, medical conditions, admission types, billing, length of stay, medications, insurance providers and test results, allowing key patterns to be identified at a glance.</p>
+
+<h4>8. Insights &amp; Findings</h4>
+<ul>
+<li><strong>54,966 patient records</strong> were analyzed.</li>
+<li><strong>Arthritis</strong> was the most frequently recorded condition with <strong>9,218 patients</strong>, followed by <strong>Asthma</strong> with <strong>9,095 patients</strong>.</li>
+<li>The average billing amount was approximately <strong>25,544.31</strong>.</li>
+<li>The maximum recorded length of stay was <strong>15 days</strong>.</li>
+<li><strong>Elective</strong> admissions were the most common admission type.</li>
+<li><strong>Lipitor</strong> was the most frequently recorded medication.</li>
+<li><strong>Cigna</strong> was the most represented insurance provider in the analysis.</li>
+<li>Approximately <strong>33.54%</strong> of recorded test results were abnormal.</li>
+</ul>
+
+<h4>9. Recommendations</h4>
+<ul>
+<li>Monitor frequently recorded conditions such as arthritis and asthma to support healthcare resource planning.</li>
+<li>Review billing patterns to better understand healthcare cost distribution and identify areas for further investigation.</li>
+<li>Use admission and length-of-stay patterns to support hospital capacity and operational planning.</li>
+<li>Monitor abnormal test-result patterns alongside medical conditions and demographics for deeper analysis.</li>
+<li>Track medication patterns to support medication planning and inventory decisions.</li>
+<li>Further analysis could examine relationships between medical conditions, medications, billing, length of stay and patient outcomes.</li>
+</ul>
+
+<h4>10. Conclusion</h4>
+<p>This project demonstrates how a large healthcare dataset can be cleaned, organized and analyzed in Excel to produce practical insights. By examining <strong>54,966 patient records</strong>, the analysis identified patterns across conditions, admissions, billing, medications, insurance, test results and hospital stays. The resulting dashboard turns these findings into a clear visual summary that can support healthcare-related operational analysis and decision-making.</p>
+</div></details></div></article>
+
+<article class="project"><div class="project-top"><div><div class="num">02</div><h3>E-commerce Sales Analysis</h3><div class="tools">SQL · Power BI</div></div></div><p>Analysis of a small e-commerce business to understand sales performance, order fulfillment, product categories and customer contribution.</p>
+<div class="details"><details><summary>View case study</summary><div class="case">
+<h4>1. Introduction</h4><p>This project analyzes transactional data from a small e-commerce business to understand sales performance, order fulfillment, product performance and customer purchasing behavior. SQL was used to work with the relational data, while Power BI was used to model, analyze and visualize the results.</p>
+<h4>2. Problem Statement</h4><p>The business has customer, product and order information stored across separate tables, making it difficult to get a clear view of overall performance. This project brings the data together to understand revenue, product categories, order fulfillment and customer contribution.</p>
+<h4>3. Data Sourcing</h4><p>The dataset consists of three related tables — <strong>Customers, Products and Orders</strong> — representing a fictional e-commerce business. The period covered is <strong>June 2023 to October 2023</strong>, with <strong>80 customers and 130 orders</strong> across Electronics, Accessories and Office.</p>
+<h4>4. Data Transformation &amp; Cleaning</h4><p>The data was loaded into MySQL and prepared for analysis before being connected to Power BI through an ODBC connection. The tables were reviewed for missing values, duplicates and inconsistencies. No major cleanup was required.</p>
+<h4>5. Data Modelling</h4><p>Orders was used as the central fact table, with Customers and Products providing supporting information. Relationships were established using <code>customer_id</code> and <code>product_id</code>.</p>
+<h4>6. Analytics &amp; Measures</h4><ul><li>Revenue</li><li>Total Orders</li><li>Total Customers</li><li>Average Order Value</li><li>All Orders</li><li>Shipped or Completed</li><li>Completed Orders</li><li>Top 10 Revenue Share</li></ul>
+<h4>7. Dashboard &amp; Visuals</h4><p>The dashboard contains two pages. Page 1 presents Revenue, Orders, Customers, Average Order Value, Revenue by Category, Orders by Status, Revenue by Month and an Order Fulfillment Funnel. Page 2 focuses on the Top 10 Customers by Spend and Top 10 Revenue Share. Slicers allow filtering by Month, Country and Category.</p>
+<h4>8. Insights &amp; Findings</h4><ul><li><strong>130 orders</strong> from <strong>80 customers</strong> generated <strong>$6,757.05</strong> in revenue.</li><li>Average order value was <strong>$51.98</strong>.</li><li>Electronics was the strongest revenue-generating category.</li><li>Monthly revenue rose from <strong>$757 in June</strong> to a peak of <strong>$1,747 in July</strong>.</li><li><strong>103 of 130 orders (79.2%)</strong> were shipped or completed.</li><li><strong>77 of 130 orders (59.2%)</strong> were completed.</li><li><strong>27 orders</strong> remained pending.</li><li>The top 10 customers generated <strong>$2,147.53 (31.78%)</strong> of total revenue.</li><li>Anna Mueller was the highest-spending customer at <strong>$241.96</strong>.</li></ul>
+<h4>9. Recommendations</h4><ul><li>Investigate the pending orders to improve fulfillment and customer experience.</li><li>Continue monitoring Electronics because of its strong revenue contribution.</li><li>Develop retention strategies for high-value customers.</li><li>Monitor monthly sales while considering incomplete reporting periods such as October.</li></ul>
+<h4>10. Conclusion</h4><p>This project demonstrates an end-to-end analytics workflow, from working with relational data in SQL to creating DAX measures and an interactive Power BI dashboard. The analysis provides a clear view of sales performance, product categories, order fulfillment and customer contribution.</p>
+</div></details></div></article>
+
 </div></div></section>
-<section id="contact"><div class="wrap"><div class="contact-box"><div class="eyebrow" style="color:#dca6ca">Contact</div><h2>Let’s connect.</h2><p>I’m open to entry-level data analyst opportunities, internships and projects where I can work with real data and continue building practical experience.</p><a class="contact-link" href="https://www.linkedin.com/in/anthonia-churchill-823937316" target="_blank" rel="noopener">LinkedIn →</a></div></div></section>
-<footer class="wrap"><span>© 2026 Anthonia Churchill</span><span>Data Analytics Portfolio</span></footer>
+
+<section id="skills"><div class="wrap"><div class="section-head"><div><div class="kicker">Technical skills</div><h2>Tools I work with</h2></div></div><div class="skills"><span class="pill">Excel</span><span class="pill">SQL</span><span class="pill">Power BI</span><span class="pill">DAX</span><span class="pill">Data Cleaning</span><span class="pill">Data Visualization</span><span class="pill">Pivot Tables</span></div></div></section>
+
+<section id="contact"><div class="wrap"><div class="contact"><div class="kicker" style="color:#e7b9d7">Contact</div><h2>Let's connect.</h2><p>I’m open to entry-level data analyst opportunities, internships and projects where I can work with real data and continue building practical experience.</p><a href="https://www.linkedin.com/in/anthonia-churchill-823937316" target="_blank" rel="noopener">LinkedIn →</a></div></div></section>
+<footer class="wrap footer"><span>© 2026 Anthonia Churchill</span><span>Data Analytics Portfolio</span></footer>
 </body></html>
